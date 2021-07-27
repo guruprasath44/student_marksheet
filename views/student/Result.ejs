@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/public/css/result.css">
+</head>
+<body>
+    <div class="table-data" id="conatiner">
+        <div class="container">
+            <h2>Marksheet</h2>
+            <div class="simpl-btn">
+                <button class="btn btn-primary" title="Click here you Logout"
+                    onclick=" window.location.href='/' ">Logout</button>
+            </div>
+        </div>
+        <div class="conatiner1">
+            <table align="center" cellspacing="3px" border="1">
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Roll.No</th>
+                    <th>Exam Date</th>
+                    <th>Subject 1</th>
+                    <th>Subject 2</th>
+                    <th>Subject 3</th>
+                    <th>Average Score</th>
+                </tr>
+                <% if(data){ %>
+                    <%var i=1;%>
+                        <tr align="center">
+                            <td>
+                                <%=i;%>
+                            </td>
+                            <td>
+                                <%=data.name %>
+                            </td>
+                            <td>
+                                <%=data.roll_no %>
+                            </td>
+                            <% var datemonth=data.date.getMonth()+1 %>
+                                <td>
+                                    <%=data.date.getDate()+" /"+datemonth +"/"+ data.date.getFullYear()%>
+                                </td>
+                                <td>
+                                    <%=data.sub1 %>
+                                </td>
+                                <td>
+                                    <%=data.sub2 %>
+                                </td>
+                                <td>
+                                    <%=data.sub3 %>
+                                </td>
+                                <td>
+                                    <%=Math.round((data.sub1+data.sub2+data.sub3) /3)%>
+                                </td>
+                        </tr>
+                        <% } else {%>
+                            <tr>
+                                <td colspan="9" class="notfound">No Data Found</td>
+                            </tr>
+                            <% }%>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

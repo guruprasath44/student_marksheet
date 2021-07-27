@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="/public/js/adminvalid.js"></script>  
+    <link rel="stylesheet" href="/public/css/addmarks.css">
+    <title>Admin | Addmarks</title>
+</head>
+<body>
+    <div class="container">
+        <div class="simpl-btn">
+            <button  class="btn logout btn-primary" title="Click here you Logout" onclick=" window.location.href='/' ">Logout</button>
+        </div>
+        <div class="two  title alt-two">
+            <h1>Student Marksheet
+            </h1>
+          
+        </div>
+       
+       
+        <% if(message!='' ){%>
+            <div class="alert alert-danger alert-dismissible col-4" id="success-alert">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <%= message %>
+            </div>s
+            <%}%>
+            <% if(success!='' ){%>
+                <div class="alert alert-success alert-dismissible col-4" id="success-alert">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                  <%= success %>
+                </div>s
+                <%}%>
+               
+        <div class="card forms-container">
+            <form action="/addmarks" method="post">
+                <h2 class="tit"> Student Mark Entry</h2>
+                <div class="social-login">
+                </div>
+                <div class="email-login">
+                   <input type="text" id="name" name="name" title ="Student name" placeholder="Student Name *" onkeyup=" return namecheck()"
+                        onmouseout="namedone()" required>
+                </div>
+                <span id="text1"></span>
+                <div class="email-login ">
+                    <input type="text" name="roll_no" title="Roll Number" placeholder="Roll Number Ex. 18ITXX *" id="roll_no" required>
+                </div>
+                <div class="email-login">
+                    <input type="date" id="date" name="date" title="Date of Examination" required>
+                </div>
+                <span id="text2"></span>
+                <div class="email-login">
+                    <input type="number" id="sub1" placeholder="Subject 1 *"  title="Subject 1" name="sub1" required>
+                </div>
+                <div class="email-login">
+                    <input type="number" id="sub2" placeholder="Subject 2 *" title="Subject 2" name="sub2" required>
+                </div>
+                <div class="email-login">
+                    <input type="number" id="sub3" placeholder="Subject 3 *" title="Subject 3" name="sub3" required>
+                </div>
+    
+                <button class="cta-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+     function namecheck(){
+    var form =document.getElementById("form");
+    var name = document.getElementById("name").value;
+    var nameregex= /^[a-zA-Z.]{1,20}$/;
+    var text= document.getElementById("text1");
+    if(name.match(nameregex)){
+      text.innerHTML= "Perfect!";
+      text.style.color="#008000";
+      return true;
+    }
+    else{
+      text.innerHTML= "Username should contain Only Alphabets ";
+      text.style.color="#ff0000";
+      return false;
+    }
+}
+</script>
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    $("#success-alert").fadeTo(2000, 500).slideUp(200, function () {
+      $("#success-alert").slideUp(200);
+    })
+
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
