@@ -50,12 +50,14 @@ h1 em {
     box-sizing: border-box;
 }
 .title {
-    position: relative;
+    
     background: #f8f8f8;
-    width: 90%;
+    width: 400px;
     max-width: 500px;
-    padding: 2em;
+    min-width: 300px;
+    padding: 1em;
     margin: 1.5em auto;
+    font-size: 14px;
     border: 3px solid rgba(0, 0, 0, 0.08);
 }
 h1:before,

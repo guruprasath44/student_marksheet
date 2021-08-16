@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="..//public/images/list-icon-png-27.jpg"  type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -13,28 +14,28 @@
     <title>Admin | Login</title>
 </head>
 <body>
-    <div class="container">
+   
         <div class="simpl-btn">
-            <button  class="btn btn-primary" title="Click to go Dashboard" onclick=" window.location.href='/' ">Dashboard</button>
+            <button  class="btn btn-primary" title="Click here to go Dashboard" onclick=" window.location.href='/' ">Dashboard</button>
         </div>
         <div class="two  title alt-two">
             <h1>Student Marksheet
             </h1>
         </div>
         <% if(message!='' ){%>
-            <div class="alert alert-danger alert-dismissible col-4" id="success-alert">
-              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-              <%= message %>
+            <div class="alert alert-danger alert-dismissible col-3" id="success-alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <%= message %>
             </div>s
             <%}%>
             <% if(success!='' ){%>
-                <div class="alert alert-success alert-dismissible col-4" id="success-alert">
-                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                  <%= success %>
+                <div class="alert alert-success alert-dismissible col-3" id="success-alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <%= success %>
                 </div>s
                 <%}%>
         <div class="card">
-          
+        
             <form action='/admin/login' method="POST">
                 <h2 class="tit"> Log in</h2>
                 <p class="subtitle">New user? <a href="/admin/signup"> Sign Up</a></p>
@@ -53,7 +54,7 @@
                 <button class="cta-btn">Log In</button>
             </form>
         </div>
-    </div>
+   
 </body>
 <script src="/plugins/jquery/jquery.min.js"></script>
 <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -61,10 +62,11 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
-    $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
-      $("#success-alert").slideUp(500);
-    })
-    
+ $("#success-alert").fadeTo(2000, 500).slideUp(200, function(){
+$("#success-alert").slideUp(200);
+});
 </script>
 </html>

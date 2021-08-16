@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const Student = require('../model/student');
 const Admin = require('../model/admin');
 const Marksheet = require('../model/marksheet');
+  
 const AdminLogin = async (data) => {
   try {
     const {
@@ -63,6 +64,7 @@ const AdminSignup = async (reguser) => {
   } catch (err) {
     const message = 'Signup failed';
     const status = 500;
+    console.log(err);
     return { message, status };
   }
 };
@@ -73,6 +75,7 @@ const StudentLogin = async (data) => {
       } = data;
       
       const student = await Student.findOne({ email });
+      
       if (!student) {
         const message = 'User not found';
         const status = 404;
@@ -81,6 +84,7 @@ const StudentLogin = async (data) => {
       }
       const validPassword = await bcrypt.compare(password, student.password);
       if (!validPassword) {
+  
         const message = 'Wrong Password';
         const status = 400;
         return { message, status };

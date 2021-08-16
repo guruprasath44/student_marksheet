@@ -7,19 +7,18 @@ body {
 body {
     background-color: rgb(228, 229, 247);
 }
-.social-login img {
-    width: 24px;
-}
+
 a {
     text-decoration: none;
 }
 .card {
+    margin-left: 200px;
     font-family: sans-serif;
-    width: 380px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 0em;
+    margin-bottom: -2.5em;
     border-radius: 5px;
     background-color: #ffff;
     padding: 1.4rem;
@@ -40,11 +39,7 @@ a {
 .btn-text {
     margin: 0;
 }
-.social-login {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
+
 .or {
     text-align: center;
     font-weight: bold;
@@ -54,7 +49,7 @@ a {
 }
 .or span {
     background: #fff;
-    padding: 0 10px;
+    padding: 0 6px;
 }
 .email-login {
     display: flex;
@@ -66,8 +61,8 @@ a {
 input[type="text"],
 input[type="password"] {
     padding: 15px 20px;
-    margin-top: 6px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
@@ -75,25 +70,24 @@ input[type="password"] {
 .cta-btn {
     background-color: rgb(69, 69, 185);
     color: white;
-    padding: 18px 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding: 15px 18px;
+    margin-top: 1px;
+    margin-bottom: 10px;
     width: 100%;
     border-radius: 2px;
     border: none;
 }
-.forget-pass {
-    text-align: center;
-    display: block;
-}
 .title {
-    position: relative;
+    
     background: #f8f8f8;
-    width: 80%;
+    width: 400px;
     max-width: 500px;
+    min-width: 300px;
     padding: 1em;
     margin: 1.5em auto;
+    font-size: 2px;
     border: 3px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 35px;
 }
 h1 {
     position: relative;
@@ -119,7 +113,6 @@ h1 em {
 .two h1 {
     text-transform: capitalize;
 }
-
 .two h1 span {
     font-size: 13px;
     font-weight: 500;
@@ -135,10 +128,10 @@ h1 em {
 }
 @keyframes exa {
     0% {
-        top: 250px;
+        top: 200px;
     }
     50% {
-        top: 100px;
+        top: 35px;
     }
     100% {
         top: 0px;
@@ -157,5 +150,6 @@ h1 em {
     position: relative;
     text-align:left;
     margin-top:10px;
+    margin-left:100px;
     
 }

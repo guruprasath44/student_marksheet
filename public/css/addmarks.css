@@ -12,9 +12,10 @@ a {
 }
 .card {
     font-family: sans-serif;
-    width: 380px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 370px;
+    margin-left:35px;
+    margin-right: 35px;
+    margin: auto;
     margin-top: 2em;
     margin-bottom: -2.5em;
     border-radius: 5px;
@@ -82,12 +83,14 @@ input[type="date"] {
     border: none;
 }
 .title {
-    position: relative;
+    
     background: #f8f8f8;
-    width: 80%;
+    width: 400px;
     max-width: 500px;
+    min-width: 300px;
     padding: 1em;
     margin: 1.5em auto;
+    font-size: 2px;
     border: 3px solid rgba(0, 0, 0, 0.08);
 }
 h1 {
@@ -141,11 +144,20 @@ h1 em {
 .alert{
     align-items: center;
     align-content: center;
-    margin:auto ;
+    margin:0 auto ;
+    margin-top: 7px;
 }
 .logout{
     position: relative;
     text-align:left;
     margin-top:10px;
+    margin-left:100px;
+    
+}
+.simpl-btn{
+    position: relative;
+    text-align:left;
+    margin-top:10px;
+   
     
 }

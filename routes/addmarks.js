@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//const validationMiddleware = require('../middleware/validation-input');
 const services = require('../services/addmarksservices');
 router.get('/admin/addmarks',async (req, res) => {
  res.render('Addmarks',{message:"", success:""});

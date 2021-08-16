@@ -4,20 +4,24 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-* {
-    margin-top: 10px;
-    padding: 6px;
-}
+
+
 .container {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    
 }
 table {
     border-radius: 7px;
     border-width: 3px;
-    width: 75%;
+    width: 80%;
     height:10%;
     border-color:rgb(61, 183, 192);
     background-color: white;
+    margin-left:20px auto;
+    margin-right: 20px auto;
 }
 th {
     background-color: azure;
@@ -27,7 +31,10 @@ th {
 }
 h2 {
     color: white;
-    font-size: 25px;
+    font-size: 35px;
+    padding:10px;
+    margin: auto 0;
+    position: relative;
 }
 .notfound {
     text-align: center;
@@ -35,4 +42,11 @@ h2 {
 }
 tr {
     color: darkblue;
+}
+.logout{
+    
+    text-align:left;
+    margin-top:10px;
+    margin-left:10%;
+    align-items: left;
 }

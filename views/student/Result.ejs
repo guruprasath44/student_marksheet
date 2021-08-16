@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marksheet</title>
+    <link rel="shortcut icon" href="..//public/images/list-icon-png-27.jpg"  type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="/public/css/result.css">
 </head>
+<script type="text/javascript">
+  window.onload = function() {
+    if(window.location.hash) {       
+        window.location.href= '/';
+    }else{
+       
+        if(window.location == "http://localhost:5000/student/login"){
+            window.location = window.location + '#loaded';    
+            
+        }else{
+            window.location.href= '/student/login';
+        }
+       
+    }
+}
+</script>
+    
 <body>
-    <div class="table-data" id="conatiner">
+    <div class="table-data" id="container">
+        <div class="simpl-btn">
+            <button class="btn logout btn-primary" title="Click here to Logout"
+                onclick=" window.location.href='/logout' ">Logout</button>
+        </div>
         <div class="container">
             <h2>Marksheet</h2>
-            <div class="simpl-btn">
-                <button class="btn btn-primary" title="Click here you Logout"
-                    onclick=" window.location.href='/' ">Logout</button>
-            </div>
+            
         </div>
+       
         <div class="conatiner1">
             <table align="center" cellspacing="3px" border="1">
                 <tr>
                     <th>S.No</th>
                     <th>Name</th>
                     <th>Roll.No</th>
-                    <th>Exam Date</th>
+                    <th>Date of Examination</th>
                     <th>Subject 1</th>
                     <th>Subject 2</th>
                     <th>Subject 3</th>
@@ -43,7 +63,7 @@
                             </td>
                             <% var datemonth=data.date.getMonth()+1 %>
                                 <td>
-                                    <%=data.date.getDate()+" /"+datemonth +"/"+ data.date.getFullYear()%>
+                                    <%=data.date.getDate()+"/"+datemonth +"/"+ data.date.getFullYear()%>
                                 </td>
                                 <td>
                                     <%=data.sub1 %>
@@ -67,4 +87,16 @@
         </div>
     </div>
 </body>
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    $("#success-alert").fadeTo(2000, 500).slideUp(200, function () {
+    $("#success-alert").slideUp(200);
+    })
+    
+</script>
 </html>

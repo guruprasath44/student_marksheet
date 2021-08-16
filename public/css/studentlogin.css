@@ -4,9 +4,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-body {
-    background-color: rgb(228, 229, 247);
-}
 .social-login img {
     width: 24px;
 }
@@ -14,12 +11,13 @@ a {
     text-decoration: none;
 }
 .card {
+    margin-left: 200px;
     font-family: sans-serif;
-    width: 380px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: -2.5em;
     border-radius: 5px;
     background-color: #ffff;
     padding: 1.4rem;
@@ -65,7 +63,7 @@ a {
 }
 input[type="text"],
 input[type="password"] {
-    padding: 15px 20px;
+    padding: 13px 15px;
     margin-top: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -83,12 +81,14 @@ input[type="password"] {
     border: none;
 }
 .title {
-    position: relative;
+    
     background: #f8f8f8;
-    width: 80%;
+    width: 400px;
     max-width: 500px;
+    min-width: 300px;
     padding: 1em;
     margin: 1.5em auto;
+    font-size: 2px;
     border: 3px solid rgba(0, 0, 0, 0.08);
 }
 h1 {
@@ -130,10 +130,10 @@ h1 em {
 }
 @keyframes exa {
     0% {
-        top: 250px;
+        top: 150px;
     }
     50% {
-        top: 100px;
+        top: 50px;
     }
     100% {
         top: 0px;
@@ -142,11 +142,13 @@ h1 em {
 .alert{
     align-items: center;
     align-content: center;
-    margin:auto ;
+    margin:0 auto ;
+    margin-top:7px;
 }
 .simpl-btn{
     position: relative;
     text-align:left;
     margin-top:10px;
+   margin-left: 100px;
     
 }
